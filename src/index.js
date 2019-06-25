@@ -1,12 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import reactdom from 'react-dom';
+import Header from './components/header';
+import Topmenu from './components/topmenu';
+import Slide from './components/slide';
+import Tileare from './components/tileare';
+import Mainarea from './components/mainarea';
+import Sidearea from './components/sidearea';
+import Footer from './components/footer';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+    const App=()=>{
+        
+        return (
+          <div>
+                <Header/>
+           <Topmenu/>
+           <Slide/>
+           <Tileare/>
+           <Mainarea/>
+           <Sidearea/>
+           <Footer/>
+           
+          </div>
+        )
+        
+        
+    }
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+reactdom.render(<App/>,document.querySelector('#root'));
